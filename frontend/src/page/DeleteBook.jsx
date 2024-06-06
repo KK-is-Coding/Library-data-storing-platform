@@ -14,7 +14,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`library-data-storing-platform-api.vercel.app/books/${id}`)
+      .delete(`https://library-data-storing-platform-api.vercel.app/books/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted successfully !!', { variant: 'success' });
