@@ -15,11 +15,17 @@ app.use(express.json())
 // app.use(cors())
 
 // Option 2: Allow custom origins
+// app.use(
+//     cors({
+//         origin: "https://library-data-storing-platform-frontend.vercel.app",
+//         methods: ['GET', 'POST', 'DELETE', 'PUT'],
+//         allowedHeaders: ['Content-Type'],
+//     })
+// )
+
 app.use(
     cors({
         origin: "https://library-data-storing-platform-frontend.vercel.app",
-        methods: ['GET', 'POST', 'DELETE', 'PUT'],
-        allowedHeaders: ['Content-Type'],
     })
 )
 
