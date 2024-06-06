@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true)
     axios
-      .get("library-data-storing-platform-api.vercel.app/books")
+      .get("https://library-data-storing-platform-api.vercel.app//books")
       .then((res) => {
         setBooks(res.data.data)
         setLoading(false)
