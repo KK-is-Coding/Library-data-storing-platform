@@ -3,20 +3,26 @@ import express, { json } from "express";
 import mongoose from "mongoose";
 import booksRoutes from "./routes/booksRoutes.js"
 import cors from "cors"
-import {config} from "dotenv";
+import dotenv from "dotenv";
+
+
+dotenv.config();
 
 
 const app = express()
 
 // Middlewares for parsing request body
+app.use(express.json());
 
 
-config({
-    path: "./config.env"
-})
+// config({
+//     path: "./config.env"
+// })
+
 
 const PORT = process.env.PORT
 const mongoDBURL = process.env.mongoDBURL
+const HOST = process.env.HOST
 
 
 // Middlewares for handling CORS policy
@@ -26,7 +32,7 @@ const mongoDBURL = process.env.mongoDBURL
 // Option 2: Allow custom origins
 app.use(
     cors({
-        origin: "https://library-data-storing-platform-frontend.vercel.app",
+        origin: HOST,
         methods: ['GET', 'POST', 'DELETE', 'PUT'],
         allowedHeaders: ['Content-Type'],
         credentials: true,
