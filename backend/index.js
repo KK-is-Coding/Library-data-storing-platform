@@ -12,17 +12,17 @@ app.use(express.json())
 
 // Middlewares for handling CORS policy
 // Option 1: Allow all origins with default of cors(*) 
-// app.use(cors())
+app.use(cors())
 
 // Option 2: Allow custom origins
-app.use(
-    cors({
-        origin: "https://library-data-storing-platform-frontend.vercel.app",
-        methods: ['GET', 'POST', 'DELETE', 'PUT'],
-        allowedHeaders: ['Content-Type'],
-        credentials: true,
-    })
-)
+// app.use(
+//     cors({
+//         origin: "https://library-data-storing-platform-frontend.vercel.app",
+//         methods: ['GET', 'POST', 'DELETE', 'PUT'],
+//         allowedHeaders: ['Content-Type'],
+//         credentials: true,
+//     })
+// )
 
 app.get('/', (req, res) => {
     console.log("request passed...")
