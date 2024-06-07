@@ -10,7 +10,8 @@ const ShowBook = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
+    axios.defaults.withCredentials = true;
     axios
       .get(`https://library-data-storing-platform-api.vercel.app/books/${id}`)
       .then((res) => {
