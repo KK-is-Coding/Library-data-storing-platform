@@ -36,7 +36,8 @@ app.use(cors())
 
 
 app.get('/', (req, res) => {
-    console.log("request passed...")
+    // console.log("request passed...")
+    res.json("Request passed...")
 })
 
 
