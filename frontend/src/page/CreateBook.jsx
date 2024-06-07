@@ -21,6 +21,7 @@ const CreateBooks = () => {
       publishYear,
     };
     setLoading(true);
+    axios.defaults.withCredentials = true;
     axios
       .post('https://library-data-storing-platform-api.vercel.app/books', data)
       .then(() => {
