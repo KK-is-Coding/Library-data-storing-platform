@@ -16,6 +16,7 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
+    axios.defaults.withCredentials = true;
     axios.get(`https://library-data-storing-platform-api.vercel.app/books/${id}`)
     .then((response) => {
         setAuthor(response.data.author);
@@ -36,6 +37,7 @@ const EditBook = () => {
       publishYear,
     };
     setLoading(true);
+    axios.defaults.withCredentials = true;
     axios
       .put(`https://library-data-storing-platform-api.vercel.app/books/${id}`, data)
       .then(() => {
