@@ -28,7 +28,7 @@ app.use(
     cors({
         origin: "https://library-data-storing-platform-frontend.vercel.app",
         methods: ['GET', 'POST', 'DELETE', 'PUT'],
-        allowedHeaders: ['Origin', 'Content-Type', 'Accept'],
+        allowedHeaders: ['Content-Type'],
         credentials: true,
     })
 )
