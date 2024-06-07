@@ -13,6 +13,7 @@ const DeleteBook = () => {
 
   const handleDeleteBook = () => {
     setLoading(true);
+    axios.defaults.withCredentials = true;
     axios
       .delete(`https://library-data-storing-platform-api.vercel.app/books/${id}`)
       .then(() => {
