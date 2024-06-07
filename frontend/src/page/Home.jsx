@@ -15,7 +15,8 @@ const Home = () => {
   const [showType, setShowType] = useState('table')
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
+    axios.defaults.withCredentials = true;
     axios
       .get(`https://library-data-storing-platform-api.vercel.app/books`)
       .then((res) => {
