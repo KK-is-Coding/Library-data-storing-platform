@@ -26,7 +26,8 @@ const mongoDBURL = process.env.mongoDBURL
 // Option 2: Allow custom origins
 app.use(
     cors({
-        origin: "https://library-data-storing-platform-frontend.vercel.app",
+        origin: "",
+        // https://library-data-storing-platform-frontend.vercel.app
         methods: ['GET', 'POST', 'DELETE', 'PUT'],
         allowedHeaders: ['Content-Type'],
         credentials: true,
