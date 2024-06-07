@@ -20,7 +20,7 @@ app.use(
         origin: "https://library-data-storing-platform-frontend.vercel.app",
         methods: ['GET', 'POST', 'DELETE', 'PUT'],
         allowedHeaders: ['Content-Type'],
-        withCredentials: true,
+        credentials: true,
     })
 )
 
