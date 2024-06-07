@@ -9,7 +9,6 @@ import {config} from "dotenv";
 const app = express()
 
 // Middlewares for parsing request body
-app.use(express.json())
 
 
 config({
@@ -34,6 +33,7 @@ app.use(cors())
 //     })
 // )
 
+app.use(express.json())
 
 app.get('/', (req, res) => {
     console.log("request passed...")
